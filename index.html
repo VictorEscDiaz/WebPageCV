@@ -327,12 +327,19 @@
                 });
             });
 
-            if (mobileMenuBtn && navMenu) {
-                mobileMenuBtn.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    navMenu.classList.toggle('active');
-                });
-            }
+            const mobileBtn = document.getElementById('mobileMenuBtn');
+    const menu = document.getElementById('navMenu');
+
+    if (mobileBtn && menu) {
+        const toggleMenu = (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            menu.classList.toggle('active');
+        };
+
+        // Soporte para touch y click sin duplicar ejecución
+        mobileBtn.addEventListener('pointerdown', toggleMenu);
+    }
         });
     </script>
 </body>

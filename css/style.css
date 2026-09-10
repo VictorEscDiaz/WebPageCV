@@ -447,3 +447,12 @@ a:hover {
         font-size: 1rem;
     }
 }
+
+.mobile-menu-btn span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--nav-text);
+    border-radius: 2px;
+    pointer-events: none; /* Evita que las rayas roben el clic del botón */
+}
