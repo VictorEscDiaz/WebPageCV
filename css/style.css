@@ -1,0 +1,449 @@
+:root {
+    /* Tailwind inspired color palette */
+    --bg-main: #f1f5f9; /* Slate 100 - nice light gray background */
+    --bg-surface: #ffffff; /* White cards */
+    --nav-bg: #0f172a; /* Slate 900 - Very dark, clearly visible navbar */
+    --nav-text: #f8fafc;
+    --nav-text-muted: #94a3b8;
+    --nav-active: #38bdf8; /* Light blue accent for active links */
+    
+    --text-primary: #1e293b;
+    --text-secondary: #475569;
+    --border-color: #e2e8f0;
+    --accent: #2563eb; /* Blue 600 */
+    --accent-hover: #1d4ed8;
+    
+    --container-width: 850px;
+    --radius: 8px; 
+    --transition: 0.2s ease-in-out;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   TOP NAVIGATION - HIGHLY VISIBLE
+   ========================================= */
+.top-nav {
+    position: sticky;
+    top: 0;
+    background-color: var(--nav-bg);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Strong shadow */
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--nav-text);
+    letter-spacing: -0.02em;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    color: var(--nav-text-muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    transition: all var(--transition);
+}
+
+.nav-btn:hover {
+    color: var(--nav-text);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-btn.active {
+    color: var(--nav-active);
+    background-color: rgba(56, 189, 248, 0.1);
+    font-weight: 600;
+}
+
+/* Mobile Menu Button (Hamburger) */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+}
+
+.mobile-menu-btn span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--nav-text);
+    border-radius: 2px;
+}
+
+/* Layout */
+.content-container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+}
+
+/* Sections */
+.page-section {
+    display: none;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.page-section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.section-title {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.section-subtitle {
+    color: var(--text-secondary);
+    margin-top: -1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.profile-photo {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    border: 3px solid var(--bg-surface);
+    box-shadow: var(--shadow);
+}
+
+.hero-name {
+    font-size: 2.25rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.03em;
+}
+
+.hero-title {
+    font-size: 1.2rem;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all var(--transition);
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--nav-bg);
+    color: white;
+    box-shadow: var(--shadow);
+}
+
+.btn-primary:hover {
+    background-color: #1e293b;
+    transform: translateY(-1px);
+}
+
+.btn-outline {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    box-shadow: var(--shadow);
+}
+
+.btn-outline:hover {
+    border-color: var(--text-secondary);
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Grids & Cards */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.col-span-2 {
+    grid-column: span 2;
+}
+
+.card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    padding: 1.75rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+    color: var(--nav-bg);
+}
+
+.card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* Lists */
+.simple-list {
+    list-style: none;
+}
+
+.simple-list li {
+    position: relative;
+    padding-left: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.simple-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* Resume Timeline */
+.resume-block {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.timeline-item {
+    margin-bottom: 1.5rem;
+    padding-left: 1.25rem;
+    border-left: 3px solid var(--border-color);
+}
+
+.timeline-date {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 0.25rem;
+    background: #eff6ff;
+    padding: 2px 8px;
+    border-radius: 12px;
+}
+
+.timeline-item h4 {
+    font-size: 1.05rem;
+    margin-bottom: 0.25rem;
+    margin-top: 0.5rem;
+}
+
+/* Projects Tags */
+.tags {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tags span {
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+/* Schedule Table */
+.table-responsive {
+    overflow-x: auto;
+    padding: 0;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    min-width: 700px;
+}
+
+.schedule-table th, .schedule-table td {
+    border: 1px solid var(--border-color);
+    padding: 0.75rem;
+    text-align: center;
+}
+
+.schedule-table th {
+    background-color: #f8fafc;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.time-col {
+    color: var(--text-secondary);
+    background-color: #f8fafc;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.class-item {
+    background-color: #e0f2fe; /* Light blue background for classes */
+    color: #0369a1; /* Dark blue text */
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.class-item span {
+    display: block;
+    font-size: 0.75rem;
+    color: #0284c7;
+    margin-top: 2px;
+}
+
+/* Contact */
+.contact-row {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.contact-row strong {
+    display: inline-block;
+    width: 90px;
+    color: var(--nav-bg);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+    
+    .col-span-2 {
+        grid-column: span 1;
+    }
+
+    .flex-between {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    /* Mobile Nav Menu Behavior */
+    .mobile-menu-btn {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--nav-bg); /* Same dark color as navbar */
+        padding: 1rem;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu.active {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-btn {
+        width: 100%;
+        text-align: left;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+    }
+}

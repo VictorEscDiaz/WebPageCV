@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Víctor Manuel Escobar Díaz | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Top Navigation Bar (Now highly visible) -->
+    <header class="top-nav">
+        <div class="nav-container">
+            <div class="nav-logo">Víctor Escobar</div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><button class="nav-btn active" data-target="home">Home</button></li>
+                    <li><button class="nav-btn" data-target="about">Info</button></li>
+                    <li><button class="nav-btn" data-target="schedule">Schedule</button></li>
+                    <li><button class="nav-btn" data-target="cv">Resume</button></li>
+                    <li><button class="nav-btn" data-target="projects">Projects</button></li>
+                    <li><button class="nav-btn" data-target="skills">Skills</button></li>
+                    <li><button class="nav-btn" data-target="contact">Contact</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="content-container">
+        
+        <!-- HOME SECTION -->
+        <section id="home" class="page-section active">
+            <div class="hero">
+                <img src="assets/IMG_1687.JPEG" alt="Víctor Manuel Escobar Díaz" class="profile-photo">
+                <h1 class="hero-name">Víctor Manuel Escobar Díaz</h1>
+                <h2 class="hero-title">Computer Engineering Student</h2>
+                <p class="hero-description">
+                    Passionate about software development, systems architecture, and continuous learning. 
+                    I focus on building clean, efficient solutions and understanding technology from the hardware up to the web.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="document.querySelector('[data-target=\'cv\']').click()">View Resume</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PERSONAL INFO SECTION -->
+        <section id="about" class="page-section">
+            <h2 class="section-title">Personal Information</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Who I Am</h3>
+                    <p>I am a Computer Engineering student based in Mexico City, currently studying at the Faculty of Engineering at UNAM. I enjoy solving logical problems and understanding the core mechanics of the technologies I use daily.</p>
+                </div>
+                <div class="card">
+                    <h3>What I Like</h3>
+                    <p>I have a strong interest in backend engineering, data analysis, and hardware optimization. I like configuring lightweight Linux distributions to maximize system efficiency and developing practical software tools.</p>
+                </div>
+                <div class="card col-span-2">
+                    <h3>Hobbies & Interests</h3>
+                    <ul class="simple-list">
+                        <li><strong>Fitness:</strong> Strength and cardiovascular training, consistently tracking progress.</li>
+                        <li><strong>Reading:</strong> Digital reading on Kindle and Dan Brown saga.</li>
+                        <li><strong>Entertainment:</strong>I love movies, a little bit of everything</li>
+                        <li><strong>Gaming:</strong> Multiplayer Online Games like: LOL, Fortnite, AmongUs</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCHEDULE SECTION -->
+        <section id="schedule" class="page-section">
+            <h2 class="section-title">Current Schedule</h2>
+            <p class="section-subtitle">4th Semester - Faculty of Engineering</p>
+            <div class="card table-responsive">
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thu</th>
+                            <th>Fri</th>
+                            <th>Sat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time-col">7:00 - 8:59</td>
+                            <td></td>
+                            <td><div class="class-item">Finance<br><span>B306</span></div></td>
+                            <td></td>
+                            <td><div class="class-item">Finance<br><span>B306</span></div></td>
+                            <td></td>
+                            <td><div class="class-item">Dist. Systems</div></td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">9:00 - 10:59</td>
+                            <td></td>
+                            <td><div class="class-item">Comp Graphics<br><span>B204</span></div></td>
+                            <td></td>
+                            <td><div class="class-item">Comp Graphics<br><span>B204</span></div></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">11:00 - 12:59</td>
+                            <td></td>
+                            <td><div class="class-item">Ethics<br><span>A103</span></div></td>
+                            <td></td>
+                            <td><div class="class-item">Ethics<br><span>A103</span></div></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">13:00 - 14:59</td>
+                            <td><div class="class-item">Economics<br><span>A102</span></div></td>
+                            <td><div class="class-item">USECAD</div></td>
+                            <td><div class="class-item">Economics<br><span>A102</span></div></td>
+                            <td rowspan="2"><div class="class-item">USECAD</div></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">15:00 - 16:59</td>
+                            <td><div class="class-item">English</div></td>
+                            <td><div class="class-item">Graphics Lab<br><span>Q219</span></div></td>
+                            <td><div class="class-item">English</div></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">17:00 - 18:59</td>
+                            <td><div class="class-item">USECAD</div></td>
+                            <td><div class="class-item">VLSI<br><span>A302</span></div></td>
+                            <td><div class="class-item">VLSI LAB<br><span>T101</span></div></td>
+                            <td><div class="class-item">VLSI<br><span>A302</span></div></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">19:00 - 20:59</td>
+                            <td></td>
+                            <td><div class="class-item">Networks<br><span>A306</span></div></td>
+                            <td><div class="class-item">Networks Lab<br><span>Q208</span></div></td>
+                            <td><div class="class-item">Networks<br><span>A306</span></div></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- CV SECTION -->
+        <section id="cv" class="page-section">
+            <div class="flex-between">
+                <h2 class="section-title">Curriculum Vitae</h2>
+                <a href="assets/CV_EscobarDíazVíctorManuel.pdf" download class="btn btn-outline">Download PDF</a>
+            </div>
+            
+            <div class="card">
+                <div class="resume-block">
+                    <h3>Professional Summary</h3>
+                    <p>Computer Engineering student with knowledge in C, Java, and Python. Passionate about web development and experienced with modern technologies. Looking for opportunities to apply my skills in innovative projects.</p>
+                </div>
+
+                <div class="resume-block">
+                    <h3>Experience</h3>
+                    <div class="timeline-item">
+                        <span class="timeline-date">2024 - Present</span>
+                        <h4>Social Service - PC Puma Project</h4>
+                        <p>Faculty of Engineering (Quisco 2).</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">2023 - Present</span>
+                        <h4>Pre-scholarship Assistant (Prebecario) - UNICA Program</h4>
+                        <p>Faculty of Engineering, Department of Research and Development (DID).</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">2021 - 2022</span>
+                        <h4>Web Programming Mentor & Student</h4>
+                        <p>ENP 6. Participated as a student and subsequently served as a mentor.</p>
+                    </div>
+                </div>
+
+                <div class="resume-block" style="border-bottom: none; margin-bottom: 0;">
+                    <h3>Education</h3>
+                    <div class="timeline-item">
+                        <span class="timeline-date">2023 - Present</span>
+                        <h4>B.S. Computer Engineering</h4>
+                        <p>Universidad Nacional Autónoma de México (UNAM) - Faculty of Engineering</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="page-section">
+            <h2 class="section-title">Projects & Experience</h2>
+            <div class="grid-2">
+                <div class="card project-card">
+                    <h3>Chatbots & System Integrations</h3>
+                    <p>Development of conversational agents and task automations.</p>
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>Telegram</span>
+                        <span>Make.com</span>
+                    </div>
+                </div>
+                <div class="card project-card">
+                    <h3>Circuit Modeling & Simulation</h3>
+                    <p>Simulation of electronic circuits, focusing on Operational Amplifiers, BJT transistors, and MOSFETs.</p>
+                    <div class="tags">
+                        <span>Multisim Live</span>
+                        <span>Electronics</span>
+                    </div>
+                </div>
+                <div class="card project-card">
+                    <h3>PC Puma - Social Service</h3>
+                    <p>Supporting the technological infrastructure at the Faculty of Engineering, assisting with connectivity and hardware troubleshooting.</p>
+                    <div class="tags">
+                        <span>IT Support</span>
+                        <span>Hardware Maintenance</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="page-section">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Languages</h3>
+                    <ul class="simple-list">
+                        <li>C / C++</li>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>JS</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Web & Tools</h3>
+                    <ul class="simple-list">
+                        <li>HTML5 & CSS3</li>
+                        <li>Linux (Mint XFCE, Zorin OS)</li>
+                        <li>Hardware Maintenance & Diagnostics</li>
+                        <li>BIOS Configuration</li>
+                        <li>Rufus, Hiren's BootCD PE</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="page-section">
+            <h2 class="section-title">Contact</h2>
+            <div class="card">
+             <div class="contact-links">
+                    <div class="contact-row">
+                        <strong>Email:</strong> 
+                        <a href="mailto:escobardiazvictor4@gmail.com">escobardiazvictor4@gmail.com</a>
+                    </div>
+                    <div class="contact-row">
+                        <strong>Phone:</strong> 
+                        <a href="tel:+525574476442">(55) 7447 - 6442</a>
+                    </div>
+                    <div class="contact-row">
+                        <strong>Location:</strong> 
+                        <span>Mexico City, Mexico</span>
+                    </div>
+                    <div class="contact-row">
+                        <strong>GitHub:</strong> 
+                        <a href="#">https://github.com/VictorEscDiaz</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
